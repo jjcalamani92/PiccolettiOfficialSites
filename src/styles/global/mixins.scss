@@ -1,0 +1,55 @@
+@use 'variables' as *;
+/** Media Queries **/
+
+
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+      @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+      @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+      @content;
+  }
+}
+
+@mixin fold {
+  @media (max-width: #{$fold}) {
+      @content;
+  }
+}
+
+@mixin titleText($titleSize) {
+  font-size: $titleSize;
+  text-transform: capitalize;
+  color:$primaryText;
+}
+
+@mixin graphText($graphSize) {
+  font-size: $graphSize;
+  line-height: 2;
+  color:$secondaryText;
+}
+@mixin icon($iconSize) {
+  width: $iconSize;
+  height: $iconSize;
+  line-height: $iconSize;
+  font-size: $iconSize;
+  color:$primaryText;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+@mixin grid($columnas, $espaciado ) {
+  display: grid;
+  gap: $espaciado;
+  grid-template-columns: repeat($columnas, 1fr);
+}

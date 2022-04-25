@@ -1,0 +1,99 @@
+
+@use '../../../styles/global' as *;
+
+.footer {
+  background: $darkPrimaryColor;
+  @include grid(4, 1.5rem);
+  .box {
+    h3 {
+      @include titleText(2.5rem);
+      color: $white;
+      padding: 1rem 0;
+      
+    }
+    a {
+      display: block;
+      font-size: 1.5rem;
+      color: $white;
+      padding: 1rem 0;
+      text-transform: capitalize;
+      
+      .icon{
+        padding-right: 1rem;
+        transition: all 0.5s ease;
+        color: $backgroundColor;
+        color: $lightPrimaryColor;
+      }
+      &:hover .icon{
+        color: $accentColor;
+        padding-right: 2rem;
+        transition: all 0.5s ease;
+      }
+    }
+    .links{
+      text-transform: none;
+    }
+    p{
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      color: $white;
+      .icon{
+        padding-right: 1rem;
+        transition: all 0.5s ease;
+        color: $backgroundColor;
+        color: $lightPrimaryColor;
+      }
+      &:hover .icon{
+        color: $accentColor;
+        padding-right: 2rem;
+        transition: all 0.5s ease;
+      }
+      span{
+        color: $backgroundColor;
+        font-weight: 700;
+        margin-left: .5rem;
+        color: $white;
+      }
+    }
+    form input[type="email"] {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border-radius: 0.5rem;
+      background: $backgroundColor;
+      font-size: 1.6rem;
+      text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .share {
+      display: flex;
+      a {
+        
+        padding: 1rem;
+        background: $darkPrimaryColor;
+        color: $white;
+        margin-right: 0.5rem;
+        transition: all 0.5s ease;
+        
+        .iconS {
+          font-size: 3rem;
+          height: 3rem;
+          width: 3rem;
+          line-height: 3rem;
+          text-align: center;
+          align-items: center;
+        }
+        &:hover {
+          background: $accentColor;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+@include desktop {
+    @include grid(2, 1rem);
+    
+}
+@include mobile {
+    @include grid(1, 1rem);
+}
+}

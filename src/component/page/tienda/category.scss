@@ -1,0 +1,43 @@
+@use '../../../styles/global' as *;
+.category {
+  @include grid(6, 1.5rem);
+  .box {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: $backgroundColor;
+    text-align: center;
+    transition: all 0.5s ease;
+
+    &:hover {
+      // box-shadow: $box-shadow;
+      transition: all 0.5s ease;
+      img{
+        transform: scale(1.1 );
+        transition: all 0.5s ease;
+      }
+    }
+
+    img {
+      height: 10rem;
+      margin-bottom: 1rem;
+      transition: all 0.5s ease;
+      
+    }
+
+    p {
+      font-size: 1.7rem;
+      color: $black;
+      transition: all 0.5s ease;
+      text-transform: capitalize;
+    }
+  }
+@include desktop{
+  @include grid (4, 1rem);
+}
+@include tablet{
+  @include grid (3, 1rem);
+}
+@include mobile{
+  @include grid (2, 1rem);
+}
+}

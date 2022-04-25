@@ -1,0 +1,60 @@
+@use '../../../styles/global' as *;
+
+.headingPrimary{
+  padding:5rem 0;
+  text-align: center;
+  background: $accentColor;
+  background-size: cover;
+  background-position: center;
+  @include titleText(5rem);
+  color: $white;
+
+  @include tablet{
+    padding:3rem 0;
+    @include titleText(4rem);
+    color: $white;
+  }
+  
+  @include mobile{
+    padding:2rem 0;
+    @include titleText(4rem);
+    color: $white;
+  }
+}
+
+.headingSecondary{
+  margin: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  border-bottom: $border;
+  padding-bottom: 1.5rem;
+
+  span{
+    font-size: 2.5rem;
+    color:$primaryText;
+    text-transform: capitalize;
+  }
+
+  a{
+    font-size: 2rem;
+    color:$secondaryText;
+    text-transform: capitalize;
+
+    &:hover{
+      color:$primaryColor;
+    }
+  }
+@include tablet{
+  margin: 2rem;
+}
+}
+
+.headingTertiary{
+  text-align: center;
+  padding: 2rem 0;
+  color: $primaryText;
+  text-transform: uppercase;
+  font-size: 3rem;
+}

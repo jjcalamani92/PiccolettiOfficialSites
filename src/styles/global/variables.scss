@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+// Tamaño de Media Queries
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 540px;
+$fold: 375px;
+
+// Colores
+$primaryColor: #F44336;
+$darkPrimaryColor: #D32F2F;
+$lightPrimaryColor: #FFCDD2;
+$primaryText:#212121;
+$secondaryText:#757575;
+$accentColor: #FF5252;
+$backgroundColor: #eee;
+$white: #fff;
+$black: #000;
+
+
+$border : .1rem solid rgba(0,0,0,.4);
+$borderB:.1rem solid $primaryColor;
+$box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+
+

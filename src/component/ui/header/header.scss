@@ -1,0 +1,74 @@
+@use '../../../styles/global' as *;
+
+header{
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  box-shadow: $box-shadow;
+  .logo{
+    display: flex;
+    align-items: center;
+      img{
+        height: 8rem;
+        width: auto;
+      }
+      @include tablet{
+        img{
+          height: 5rem;
+        }
+      }
+    }
+  .icons {
+  display: flex;
+  align-items: center;
+  
+  .icon {
+    @include icon(2.5rem);
+    color: $primaryText;
+    transition: all 0.5s ease;
+    background: $backgroundColor;
+    margin-right: .5rem;
+    cursor: pointer;
+    &:hover{
+      color: $white;
+      transition: all 0.5s ease;
+      background: $primaryColor;
+    }
+  }
+  
+  .cart{
+    position: relative;
+    span{
+      position: absolute;
+      top: -1rem;
+      right: -.5rem;
+      background: $primaryColor;
+      color: $white;
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      &:hover{
+        background: $darkPrimaryColor;
+      }
+    }
+  }
+  .bars-icon{
+    display: none;
+  }
+  @include desktop{
+    .bars-icon{
+      display: block;
+    }
+  }
+}
+}

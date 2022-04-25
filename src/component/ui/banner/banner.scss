@@ -1,0 +1,41 @@
+@use '../../../styles/global' as *;
+.banner{
+  @include grid(3, 1.5rem);
+  .box{
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+    &:hover img{
+      transform: scale(1.2);
+      transition: all 0.5s ease;
+    }
+    .content{
+      position: absolute;
+      top:50%; left:2rem;
+      span{
+        font-size: 1.8rem;
+        color:$secondaryText;
+      }
+
+      h3{
+        padding-top: .5rem;
+        font-size: 2.2rem;
+        color:$primaryColor;
+        text-transform: capitalize;
+      }
+
+      .btn{
+        padding:.7rem 2.5rem;
+      }
+    }
+  }
+@include tablet{
+  @include grid(1, 1rem)
+}
+}

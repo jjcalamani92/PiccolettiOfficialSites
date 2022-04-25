@@ -1,0 +1,26 @@
+@use '../../../styles/global' as *;
+.counter{
+          display: inline-flex;
+          align-items:center;
+          text-align: center;
+          justify-content: space-between;
+          font-size: 2.5rem;
+          border-radius: 1rem;
+          span{
+            margin-right:2rem;
+          }
+          .icon{
+            color: $primaryColor;
+            transition: all 0.5s ease;
+            &:hover {
+              color: $darkPrimaryColor;
+              transition: all 0.5s ease;
+            }
+          }
+          p{
+            margin: 0 3rem;
+            color: $primaryText;
+          }
+          // border: $border;
+          
+        }

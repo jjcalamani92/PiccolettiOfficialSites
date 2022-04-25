@@ -1,0 +1,92 @@
+@use '../../../styles/global' as *;
+.cartShopping{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  height: calc(80vh - 5rem);
+  .icon{
+    font-size: 10rem;
+    margin-bottom:1rem;
+  }
+  h1{
+    font-size: 2rem;
+  }
+}
+
+.checkout{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+  .row{
+    h2{
+      text-align: center;
+      font-size: 4rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+    .cart-item{
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      gap:2rem;
+      margin: 2rem 0;
+     .image{
+       img {
+        height: auto;
+        width:100%;
+        border:$border;
+        align-items: center;
+        }
+      } 
+    }
+      
+      
+      .content {
+        display: block;
+        font-size: 2rem;
+        h3 {
+          color: $primaryText;
+          padding-bottom: 0.5rem;
+          text-transform: uppercase;
+        }
+        .price {
+          color: $primaryColor;
+          display: flex;
+          margin-bottom: 1rem;
+          align-items: center;
+          p{
+            color: $primaryText;
+            font-weight: 500;
+            margin-right: .3rem;
+          }
+        }
+        .counter{
+          font-size:2rem;
+        }
+        .btn{
+          width:auto;
+        }
+    }
+    
+    .orders{
+      display: flex;
+      flex-direction: column;
+      font-size: 1.8rem;
+      .order{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        h3{
+          font-weight: 500
+        }
+
+      }
+    }
+    .btn{
+      width: 100%;
+    }
+  }
+@include tablet{
+  @include grid(1, 1rem);
+}
+}

@@ -1,0 +1,187 @@
+@use '../../../styles/global' as *;
+
+.drawer{
+  position: absolute;
+  height: calc(100vh - 3rem);
+  top: 100%;
+  right: 0;
+  background-color: $backgroundColor;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+  .logo-navbars{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    img{
+      height: auto;
+      width: 100%;
+    }
+  }
+  .search {
+    display: flex;
+    width: 95%; height: 5.5rem;
+    background: $white;
+    transition: all 0.5s ease;
+    transform-origin: top right;
+    border-radius: .5rem;
+    border: $border;
+    margin: 1rem;
+    input {
+      font-size: 1.7rem;
+      padding: 0 1.2rem;
+      height: 100%;
+      width: 100%;
+      text-transform: none;
+      color: $secondaryText;
+      border-radius: .5rem;
+    }
+    label {
+      display: flex;
+      border-radius: .5rem;
+      height: 100%;
+      font-size: 2.5rem;
+      padding-right: 1.5rem;
+      color: $primaryText;
+      align-items: center;
+      padding: 0 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: $backgroundColor;
+      .icon {
+        margin: 0 1rem;
+      }
+      &:hover {
+        background: $primaryColor;
+        color: $white;
+        transition: all 0.3s ease;
+      }
+    }
+    &.active{
+      transition: all 0.5s ease;
+      transform: scale(1);
+    }
+  }
+  .nav-links{
+    flex: initial;
+    width: 100%;
+  }
+  .nav-links > ul{
+    flex-direction: column;
+  }
+  .nav-link{
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .nav-link > a{
+    line-height: 1;
+    color: $primaryText;
+    padding: 1.6rem 2rem;
+    font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: .5s;
+      text-transform: capitalize;
+      .icon{
+        margin-left: 1rem;
+      }
+  }
+  
+  .nav-link:hover > a{
+    transform: scale(1);
+    background-color: $accentColor;
+  }
+  
+  .dropdown, .dropdown.second{
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    background-color: $darkPrimaryColor;
+  }
+  
+  .dropdown.second{
+    display: none;
+  }
+  .nav-link:hover > .dropdown,
+  // .nav-link:focus-within > .dropdown,
+  .dropdown-link:hover > .dropdown{
+  // .dropdown-link:focus-within > .dropdown{
+    display: block;
+  }
+  
+  .nav-link:hover > a > .icon,
+  .dropdown-link:hover > a > .icon{
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-link > a{
+    background-color: transparent;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    line-height: 1;
+  }
+  
+  .dropdown.second .dropdown-link > a{
+    padding: 1.2rem 2rem 1.2rem 3rem;
+  }
+  
+  .dropdown.second .dropdown.second .dropdown-link > a{
+    padding: 1.2rem 2rem 1.2rem 4rem;
+  }
+  
+  .dropdown-link:not(:nth-last-child(2)){
+    border-bottom: none;
+  }
+  
+  .arrow{
+    z-index: 1;
+    background-color: $lightPrimaryColor;
+    left: 10%;
+    transform: scale(1.1) rotate(45deg);
+    transition: .5s;
+  }
+  
+  .nav-link:hover .arrow{
+    background-color: $accentColor;
+  }
+  
+  .dropdown .dropdown .arrow{
+    display: none;
+  }
+  
+  .dropdown-link:hover > a{
+    background-color: $accentColor;
+  }
+  
+  .dropdown-link:first-child:hover ~ .arrow{
+    background-color: $accentColor;
+  }
+  
+  .nav-link > a > .icon{
+    font-size: 2rem;
+    transform: rotate(-90deg);
+    transition: .7s;
+  }
+  
+  .dropdown .icon {
+    font-size: 2rem;
+    transition: .7s;
+  }
+}
+
+
+
+
+
+
+
+

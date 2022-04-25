@@ -1,0 +1,48 @@
+@use '../../../styles/global' as *;
+.image {
+    @include grid(1, 1rem);
+    overflow: hidden;
+    .image-display {
+      overflow: hidden;
+      img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      .swiper-button-prev{
+        left:30;
+        color:$darkPrimaryColor;
+      }
+      .swiper-button-next{
+        left:30;
+        color:$darkPrimaryColor;
+      }
+      .swiper-pagination-bullet {
+    background: $primaryColor;
+
+    &.swiper-pagination-bullet-active {
+      background: $primaryColor;
+    }
+  }
+    }
+    .image-select {
+      .swiper-slide{
+        cursor: pointer;
+        border:$border;
+        &-thumb-active{
+          border-color:$darkPrimaryColor;
+          
+        }
+      }
+      &-item {
+        width: 100%;
+        overflow: hidden;
+        img{
+          object-fit: cover;
+          box-shadow: $box-shadow;
+          width: 100%;
+        }
+      }
+      
+    }
+  }

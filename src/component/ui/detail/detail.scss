@@ -1,0 +1,172 @@
+@use '../../../styles/global' as *;
+
+.detail {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 3rem;
+  align-items: center;
+  
+  .content {
+    .product-title {
+      font-size: 5rem;
+      text-transform: capitalize;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+    .product-rating {
+      font-size: 2rem;
+      color:  $accentColor;
+      span {
+        font-weight: 600;
+        color: #252525;
+      }
+    }
+    .product-price {
+      margin: 1rem 0;
+      font-size: 3rem;
+      font-weight: 700;
+      span {
+        font-weight: 400;
+      }
+      .last-price span {
+        color: $accentColor;
+        text-decoration: line-through;
+      }
+      .new-price span {
+        color: $darkPrimaryColor;
+      }
+    }
+    .product-detail {
+      h2 {
+        text-transform: capitalize;
+        color: #12263a;
+        padding-bottom: 0.6rem;
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 2rem;
+        padding: 0.3rem;
+        opacity: 0.8;
+        line-height: 3rem;
+      }
+      .size{
+        margin-bottom: 1rem;
+        a{
+          width: 4rem;
+          height: 4rem;
+          line-height:2;
+          margin: 1rem;
+          background: $primaryColor;
+          color: $white;
+          text-transform: uppercase;
+          border-radius: 50%;
+          font-size: 2rem;
+          transition: all 0.5s ease;
+          &:hover{
+            background: $darkPrimaryColor;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+      ul{
+        margin: 1rem 0;
+        li{
+          margin: 0;
+          list-style: none;
+          padding-left: 1rem;
+          font-size: 2rem;
+          margin: .5rem 0;
+          font-weight: 700;
+          .icon{
+            margin-right: 1rem;
+            color: $primaryColor;
+          }
+          span{
+            font-weight: 500;
+            text-transform: capitalize
+          }
+        }
+      }
+    }
+    .purchase-info{
+      margin: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      text-align: center;
+      input{
+        align-items: center;
+        text-align: center;
+        border: $borderB;
+        border-radius: 2.5rem;
+        outline: 0;
+        padding: .5rem;
+        font-size: 2rem;
+      }
+      
+      .btn{
+        margin-top: 0;
+        border-radius: 2.5rem;
+        
+      }
+
+    }
+    .social-links{
+      font-size: 2rem;
+      .share {
+        display: flex;
+        margin-top: 1rem;
+        a {
+          padding: 1rem;
+          background: $white;
+          color: $darkPrimaryColor;
+          margin-right: 0.5rem;
+          transition: all 0.5s ease;
+          .iconS {
+            font-size: 3rem;
+            height: 3rem;
+            width: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            align-items: center;
+          }
+          &:hover {
+            background: $lightPrimaryColor;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+@include desktop{
+  
+  .content {
+    .product-title {
+      font-size: 4rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      margin: 1rem 0;
+      line-height: 1.3;
+    }
+    
+  }
+}
+@include tablet{
+  @include grid(1, 1rem);
+  .content{
+    .purchase-info{
+      input{
+        width: auto;
+      }
+    }
+  }
+}
+@include mobile{
+  .content{
+    .purchase-info{
+      @include grid(1, 1rem);
+    }
+  }
+}
+}

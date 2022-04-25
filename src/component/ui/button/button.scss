@@ -1,0 +1,33 @@
+@use '../../../styles/global' as *;
+
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background: $primaryColor;
+  color: $white;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all .2s linear;
+
+  &:hover {
+    transition: all .2s linear;
+    background: $darkPrimaryColor;
+    color: $white;
+  }
+}
+.btn-whatsapp{
+  position: fixed;
+  z-index: 20;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 2rem;
+  img{
+    height: 6rem;
+  }
+  .icon{
+    font-size: 3rem;
+  }
+}
